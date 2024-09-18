@@ -22,24 +22,27 @@ I fill it manually and a bit messy, and I want you to make them more accurate.
 My deck has the following columns: Front(=word), and Back(=translation).
 
 I want you to 
-1. Normalize, remove prepositions, and fix missprints in the 'word' field. 
+1. Normalize, remove prepositions, and fix missprints in the 'word' field.
 2. Look up the meaning, transcription, synonyms (separated by "|"), and 2-3 usage B2-level examples (separated by "\\n"). If many options are available, select one that aligns well with my 'translation' field. All these fields are in English.
 3. The 'word' can be in English or in Russian. If the 'word; is in English, 'translation' would be Russian and vice versa.
-
+4. If the word (in specified meaning) is used with particular proposition, add it too.
 I have an example for you:
 
 Input: 
 ```csv
 word,translation
 fledgling,новичок
+bound, ехать куда-то
 снисходительный,condescending
 ```
 
 Output:
 ```csv
 word,translation,transcription,meaning,synonyms,example
-"снисходительный","condescending","/ˌkɒndɪˈsɛndɪŋ/","having or showing an attitude of patronizing superiority","patronizing | disdainful | haughty","Her condescending tone made it clear she thought she was smarter than everyone else in the room. \n He offered condescending advice, as if I didn’t already know how to handle the situation. \n The manager's condescending remarks about the team's efforts only demotivated them further."
-"fledgling","новичок, зеленый юнец","/ˈflɛdʒlɪŋ/","a person or organization that is immature, inexperienced, or underdeveloped","beginner | novice | newcomer","The fledgling startup is still finding its footing in the competitive tech industry.\n As a fledgling artist, she’s just starting to gain recognition for her work.\n The fledgling team showed promise but lacked the experience to secure a victory."
+"снисходительный","condescending","/ˌkɒndɪˈsɛndɪŋ/","having or showing an attitude of patronizing superiority","patronizing | disdainful | haughty","Her condescending tone made it clear she thought she was smarter than everyone else in the room.\nHe offered condescending advice, as if I didn’t already know how to handle the situation.\nThe manager's condescending remarks about the team's efforts only demotivated them further."
+"fledgling","новичок, зеленый юнец","/ˈflɛdʒlɪŋ/","a person or organization that is immature, inexperienced, or underdeveloped","beginner | novice | newcomer","The fledgling startup is still finding its footing in the competitive tech industry.\nAs a fledgling artist, she’s just starting to gain recognition for her work.\nThe fledgling team showed promise but lacked the experience to secure a victory."
+"bound for","направляться ","/baʊnd/","going to or intended for a particular place","head to | destined to","The train was bound for Paris when it unexpectedly stopped in-between stations.\nShe felt excitement over her adventure as she packed her bags and prepared to be bound for new horizons.\nWe're currently bound for the mountains, expectinf to reach there by evening."
+
 ```
 Here is the deck:
 ---
